@@ -1,0 +1,14 @@
+/* Style normal */
+body {
+    background-color: white;
+    color: black;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Mode Konami activé */
+.konami-mode {
+    background: linear-gradient(45deg, #ff0000, #0000ff);
+    color: white;
+    font-family: "Comic Sans MS", cursive;
+}
