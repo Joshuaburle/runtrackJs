@@ -3,12 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job 03 - Formulaire pokemon</title>
+    <title>Job 03 - Filtre Pokémon</title>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Extraction de valeur JSON</h1>
+    <h1>Filtrer les Pokémon</h1>
+    
+    <form id="filter-form">
+        <label for="id">ID :</label>
+        <input type="text" id="id">
+        
+        <label for="name">Nom :</label>
+        <input type="text" id="name">
+        
+        <label for="type">Type :</label>
+    <select id="type">
+        <option value="">-- Tous --</option>
+        <option value="Acier">Acier</option>
+        <option value="Combat">Combat</option>
+        <option value="Dragon">Dragon</option>
+        <option value="Eau">Eau</option>
+        <option value="Électrik">Électrik</option>
+        <option value="Fée">Fée</option>
+        <option value="Feu">Feu</option>
+        <option value="Glace">Glace</option>
+        <option value="Insecte">Insecte</option>
+        <option value="Normal">Normal</option>
+        <option value="Plante">Plante</option>
+        <option value="Poison">Poison</option>
+        <option value="Psy">Psy</option>
+        <option value="Roche">Roche</option>
+        <option value="Sol">Sol</option>
+        <option value="Spectre">Spectre</option>
+        <option value="Ténèbres">Ténèbres</option>
+        <option value="Vol">Vol</option>
+    </select>
+
+        
+        <button type="button" id="filter-button">Filtrer</button>
+    </form>
+
+    <h2>Résultats :</h2>
+    <ul id="result-list"></ul>
 </body>
 </html>
 
-<!--job_03 en cours-->
+
+<!--job_03 terminé-->
