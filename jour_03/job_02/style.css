@@ -1,31 +1,40 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 20px;
 }
 
-#puzzle {
+#game {
+    width: 50%;
+    margin: 20px auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul li {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
 }
 
 img {
     width: 100px;
     height: auto;
-    cursor: pointer;
-    border: 2px solid transparent;
+    display: block;
+    margin: auto;
 }
 
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-#message {
-    font-size: 1.5em;
+#resultat {
+    font-size: 20px;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 10px;
 }

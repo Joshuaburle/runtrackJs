@@ -1,33 +1,26 @@
 $(document).ready(function() {
-    let puzzle = $("#puzzle");
+    // Pour déplacer les images
+    $("#sortable").sortable();
+    $("#sortable").disableSelection();
 
     // Fonction pour mélanger les images
     $("#shuffle").click(function() {
-        let images = puzzle.children();
-        images.sort(() => Math.random() - 0.5);
-        puzzle.html(images);
+        let items = $("#sortable").children();
+        items.sort(function() { return 0.5 - Math.random(); });
+        $("#sortable").empty().append(items);
     });
 
-    // Rendre les images déplaçables avec jQuery UI
-    $("#puzzle").sortable({
-        update: function() {
-            checkWin();
-        }
-    });
+    // // Vérifie si les images sont dans l'ordres
+    $("#sortable").on("sortupdate", function() {
+        let correctOrder = ["1", "2", "3", "4", "5", "6"];
+        let userOrder = $("#sortable").children().map(function() {
+            return this.id;
+        }).get();
 
-    // Vérifier si les images sont bien ordonnées
-    function checkWin() {
-        let correct = true;
-        $("#puzzle img").each(function(index) {
-            if ($(this).attr("data-order") != index + 1) {
-                correct = false;
-            }
-        });
-
-        if (correct) {
-            $("#message").text("Vous avez gagné ! 🎉").css("color", "green");
+        if (JSON.stringify(userOrder) === JSON.stringify(correctOrder)) {
+            $("#resultat").text("✅ Vous avez gagné !").css("color", "green");
         } else {
-            $("#message").text("Vous avez perdu 😢").css("color", "red");
+            $("#resultat").text("❌ Vous avez perdu !").css("color", "red");
         }
-    }
+    });
 });

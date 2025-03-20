@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job 02 - Puzzle Arc-en-ciel</title>
+    <title>Mini-jeu Jquery</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Reconstitue l'arc-en-ciel ! 🌈</h1>
+    <h1>Remettez les images dans le bon ordre !</h1>
     <button id="shuffle">Mélanger</button>
-    <div id="puzzle">
-        <img src="./images/arc1.png" data-order="1">
-        <img src="images/arc2.png" data-order="2">
-        <img src="./images/arc3.png" data-order="3">
-        <img src="./images/arc4.png" data-order="4">
-        <img src="./images/arc5.png" data-order="5">
-        <img src="./images/arc6.png" data-order="6">
+    <div id="game">
+        <ul id="sortable">
+            <li id="1"><img src="./images/arc1.png" alt="Image 1"></li>
+            <li id="2"><img src="./images/arc2.png" alt="Image 2"></li>
+            <li id="3"><img src="./images/arc3.png" alt="Image 3"></li>
+            <li id="4"><img src="./images/arc4.png" alt="Image 4"></li>
+            <li id="5"><img src="./images/arc5.png" alt="Image 5"></li>
+            <li id="6"><img src="./images/arc6.png" alt="Image 6"></li>
+        </ul>
     </div>
-    <p id="message"></p>
+    <p id="resultat"></p>
+    <script src="script.js"></script>
 </body>
 </html>
 
-<!--job_02 en cours-->
+
+<!--job_02 terminé-->
