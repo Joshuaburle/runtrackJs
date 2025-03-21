@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "name": "Jean Dupont",
+            "email": "jean.dupont@laplateforme.io",
+            "password": "123456"
+        },
+        {
+            "name": "Marie Curie",
+            "email": "marie.curie@laplateforme.io",
+            "password": "abcdef"
+        }
+    ]
+}
